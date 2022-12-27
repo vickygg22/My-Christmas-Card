@@ -54,7 +54,7 @@ body{
     backface-visibility: hidden;
 }
 .back-card{
-    background: #bfffb9;
+    background: rgb(185, 248, 209);
     transform: rotateY(180deg);
 }
 .card.open .left-card{
