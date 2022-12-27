@@ -1,0 +1,65 @@
+body{
+    margin: 100px;
+    background-color: #eee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.left-card img{
+    width: 100%;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1400px;
+    left: 0;
+    transition: all 1s;
+}
+.left-card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointe;
+    box-shadow: 5px 0px 5px rgba(0,0,0, 0.1);
+    background-color: rgb(210, 253, 217);
+    z-index: 1;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+}
+.right-card{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(210, 253, 217);
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0,0,0, 0.1);
+    color: #444;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.right-card h2{
+    color: crimson;
+}
+.left-card .card-front, .left-card .back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+.back-card{
+    background: #bfffb9;
+    transform: rotateY(180deg);
+}
+.card.open .left-card{
+    transform: rotateY(-180deg);
+}
+.card.open{
+    left: 150px;
+}
